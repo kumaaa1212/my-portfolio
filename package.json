@@ -10,6 +10,10 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
     "eslint-plugin-complexity": "^1.0.2",
     "eslint-plugin-unused-imports": "^3.0.0",
     "framer-motion": "^11.0.3",
