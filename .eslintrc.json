@@ -4,12 +4,54 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "next/core-web-vitals",
+    // デフォルトの設定
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
+  // このモジュールを使って分析してくださいとしている
+  // https://typescript-eslint.io/packages/parser
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
-  "plugins": ["import","@typescript-eslint"],
-  "root": true
+  "plugins": ["import", "@typescript-eslint", "unused-imports", "complexity"],
+  // 実際にコードを見るときに、ここのものを見てねって感じ
+  "root": true,
+  "rules": {
+    "semi": "off",
+    "no-unused-vars": "warn",
+    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": "warn",
+    "complexity/comment": ["warn", { "max": 10 }],
+    "no-console": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", ["parent", "sibling"], "object", "type", "index"],
+
+        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "pathGroups": [
+          { "pattern": "{react,react/**,react-dom/**,react-**}", "group": "builtin", "position": "before" },
+          { "pattern": "{next,next/**,next-**}", "group": "builtin", "position": "before" },
+          { "pattern": "lib/**", "group": "internal", "position": "before" },
+          { "pattern": "fetchs/**", "group": "internal", "position": "before" },
+          { "pattern": "utils/**", "group": "internal", "position": "before" },
+          { "pattern": "types/**", "group": "internal", "position": "before" },
+          { "pattern": "pages/**", "group": "internal", "position": "before" },
+          { "pattern": "components/hooks/**", "group": "internal", "position": "before" },
+          { "pattern": "{components/layout,components/layout/**}", "group": "internal", "position": "before" },
+          { "pattern": "components/parts/**", "group": "sibling", "position": "before" },
+          { "pattern": "components/widgets/**", "group": "sibling", "position": "before" },
+          { "pattern": "components/templates/**", "group": "sibling", "position": "before" }
+        ],
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ]
+  }
 }

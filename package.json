@@ -10,11 +10,15 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "eslint-plugin-complexity": "^1.0.2",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "framer-motion": "^11.0.3",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -25,6 +29,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "prettier": "^3.2.5",
+    "sass": "^1.70.0",
     "typescript": "^5"
   }
 }

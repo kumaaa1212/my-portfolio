@@ -1,0 +1,172 @@
+$values: 0, 1, 2, 4, 6, 8, 9, 10, 12, 14, 16, 18, 20, 22, 24, 25, 26, 28, 30, 32, 34, 36, 38, 40, 64;
+
+@each $value in $values {
+  .m_#{$value} {
+    margin: 1px * $value !important;
+  }
+
+  .mt_#{$value} {
+    margin-top: 1px * $value !important;
+  }
+
+  .mb_#{$value} {
+    margin-bottom: 1px * $value !important;
+  }
+
+  .mr_#{$value} {
+    margin-right: 1px * $value !important;
+  }
+
+  .ml_#{$value} {
+    margin-left: 1px * $value !important;
+  }
+
+  .mh_#{$value} {
+    margin-left: 1px * $value !important;
+    margin-right: 1px * $value !important;
+  }
+
+  .mv_#{$value} {
+    margin-top: 1px * $value !important;
+    margin-bottom: 1px * $value !important;
+  }
+}
+
+@each $value in $values {
+  .p_#{$value} {
+    padding: 1px * $value !important;
+  }
+
+  .pt_#{$value} {
+    padding-top: 1px * $value !important;
+  }
+
+  .pb_#{$value} {
+    padding-bottom: 1px * $value !important;
+  }
+
+  .pr_#{$value} {
+    padding-right: 1px * $value !important;
+  }
+
+  .pl_#{$value} {
+    padding-left: 1px * $value !important;
+  }
+
+  .ph_#{$value} {
+    padding-left: 1px * $value !important;
+    padding-right: 1px * $value !important;
+  }
+
+  .pv_#{$value} {
+    padding-top: 1px * $value !important;
+    padding-bottom: 1px * $value !important;
+  }
+}
+
+.full_width {
+  width: 100%;
+}
+
+.fw {
+  &_300 {
+    font-weight: 300;
+  }
+
+  &_400 {
+    font-weight: 400;
+  }
+
+  &_500 {
+    font-weight: 500;
+  }
+
+  &_700 {
+    font-weight: 700;
+  }
+}
+
+.fs {
+  &_8 {
+    font-size: 8px;
+  }
+
+  &_10 {
+    font-size: 10px;
+  }
+
+  &_12 {
+    font-size: 12px;
+  }
+
+  &_13 {
+    font-size: 13px;
+  }
+
+  &_14 {
+    font-size: 14px;
+  }
+
+  &_16 {
+    font-size: 16px;
+  }
+
+  &_18 {
+    font-size: 18px;
+  }
+
+  &_20 {
+    font-size: 20px;
+  }
+}
+
+.d {
+  &_none {
+    display: none;
+  }
+
+  &_flex {
+    display: flex;
+  }
+
+  &_inline {
+    display: inline;
+  }
+
+  &_block {
+    display: block;
+  }
+}
+
+.cursor {
+  &_pointer {
+    cursor: pointer;
+  }
+
+  &_not_allowed {
+    cursor: not-allowed;
+  }
+}
+
+.text_decoration {
+  &_underline {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.flex_1 {
+  flex: 1;
+}
+
+.main_color {
+  background-color: #f5f5f5;
+}
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+}
