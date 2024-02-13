@@ -8,7 +8,7 @@ export default function Layout(props: Props) {
   return (
     <div className={`${style.container} main_color`}>
       <Header/>
-      <div>{children}</div>
+      <div className={style.main}>{children}</div>
     </div>
   )
 }
