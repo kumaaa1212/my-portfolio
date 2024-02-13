@@ -10,7 +10,7 @@ export default function ModalBase(props: Props) {
   const { open, onClose } = props
   return (
     <>
-      <Modal isOpen={open} onClose={onClose} variant="gray">
+      <Modal isOpen={open} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader />
